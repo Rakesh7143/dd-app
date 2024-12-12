@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ProductDetail from "./pages/user/productdetails";
 import About from "./pages/user/about";
 import Contact from "./pages/user/contact";
@@ -22,7 +22,7 @@ function App() {
   return (
     // Wrap the entire app in AuthProvider
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter basename="/">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/HomePage" element={<HomePage />} />
@@ -43,7 +43,7 @@ function App() {
           <Route path="/admin/calendar" element={<CalendarPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
