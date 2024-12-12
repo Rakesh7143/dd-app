@@ -126,16 +126,11 @@ const Product = () => {
     </Helmet>
       <Sidebar />
       <div className="flex-1 p-8 ml-[5rem] lg:ml-64 bg-pink-50 min-h-screen">
-        <div className="mb-6 flex justify-between items-center">
-          <div className="relative">
-            <div className={`flex items-center ${isSearchExpanded ? 'w-full md:w-64' : 'w-10 md:w-64'} transition-all duration-300`}>
-              <button 
-                className="md:hidden absolute left-2 z-10"
-                onClick={() => setIsSearchExpanded(!isSearchExpanded)}
-              >
-                <Search size={20} />
-              </button>
-              <input
+        <div className="mb-6 flex justify-center items-center">
+          <div className='w-full max-w-md'>
+          <div className="relative ">
+          <Search className='absolute left-3 top-2.5' size={20} />
+          <input
                 type="text"
                 placeholder="Search by product ID or name..."
                 className={`pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 ${
@@ -144,7 +139,9 @@ const Product = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
+            <div className={`flex items-center ${isSearchExpanded ? 'w-full md:w-64' : 'w-10 md:w-64'} transition-all duration-300`}>
             </div>
+          </div>
           </div>
         </div>
 
@@ -152,7 +149,7 @@ const Product = () => {
           <table className="min-w-full table-auto">
             <thead className="bg-pink-100">
               <tr>
-                <th onClick={() => handleSort('name')} className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer">
+                <th onClick={() => handleSort('name')} className="px-3 py-2 sm:px-6 sm:py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer">
                   <div className="flex items-center">
                     Product
                     <ArrowUpDown size={14} className="ml-1" />

@@ -197,11 +197,12 @@ const Sidebar = () => {
 
             <div className={`fixed left-0 top-0 h-screen bg-pink-50 shadow-lg transition-all duration-300 flex flex-col 
                 lg:translate-x-0 lg:w-64
-                ${isOpen ? 'w-64' : 'w-20'}`}
+                ${isOpen ? 'w-64' : 'w-20'}
+                `}
             >
                 <div className="flex items-center p-4">
                     {isOpen && (
-                        <div className="text-2xl font-bold text-gray-800">
+                        <div className="text-2xl font-bold text-gray-800 ml-auto mr-8">
                             Mera Bestie
                         </div>
                     )}

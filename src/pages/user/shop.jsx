@@ -136,7 +136,7 @@ const Shop = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer"
+              className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300"
               onClick={() => filterProducts(category.name)}
             >
               <div
@@ -153,8 +153,8 @@ const Shop = () => {
       </div>
 
       {/* Filter and Sort Section */}
-      <div className="max-w-7xl mx-auto p-6">
-        <div className="flex justify-between items-center mb-4">
+      <div className="max-w-7xl mx-auto p-6 ">
+        <div className="flex justify-between items-center mb-4 ">
           <span>Showing 1 - {Math.min(loadMore, sortedProducts.length)} of {sortedProducts.length} results</span>
           <div className="flex gap-4 items-center">
             <button className="bg-gray-200 px-4 py-2 rounded" onClick={() => filterProducts('all')}>All Products</button>
@@ -185,17 +185,17 @@ const Shop = () => {
       </div>
 
       {/* Products Section */}
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="max-w-7xl mx-auto p-6 ">
         <h3 className="text-3xl font-bold mb-4">Products</h3>
         <div
-          className={`grid ${viewMode === 'grid' ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6' : 'grid-cols-1 gap-4'}`}
+          className={`grid ${viewMode === 'grid' ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6' : 'grid-cols-1 gap-4 '}`}
         >
           {(filteredProducts.length > 0 ? filteredProducts : sortedProducts)
             .slice(0, loadMore)
             .map((product) => (
               <motion.div
                 key={product._id}
-                className={`bg-white shadow-md rounded-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${
+                className={`bg-white shadow-md rounded-md overflow-hidden hover:shadow-lg transition-shadow duration-300  ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
                 initial={{ opacity: 0, scale: 0.9 }}

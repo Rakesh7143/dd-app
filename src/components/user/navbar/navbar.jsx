@@ -49,7 +49,7 @@ export default function Navbar() {
   const userId = sessionStorage.getItem("userId");
 
   return (
-    <nav className="bg-white text-black">
+    <nav className="bg-white text-black ">
       {/* Promotional Banner */}
       <div className="bg-white text-pink-500 py-2 text-center text-sm border-b">
         <span className="inline-flex items-center">

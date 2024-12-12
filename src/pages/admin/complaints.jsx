@@ -86,7 +86,7 @@ const Complaints = () => {
       <div className="flex-1 p-8 ml-[5rem] lg:ml-64 bg-pink-50 min-h-screen">
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-10 w-full max-w-2xl px-4">
           <div className="relative">
-            <div className="flex items-center w-full">
+            <div className="flex items-center w-full justify-center">
               <button 
                 className="md:hidden absolute left-2 z-10"
                 onClick={() => setIsSearchExpanded(!isSearchExpanded)}
@@ -96,7 +96,7 @@ const Complaints = () => {
               <input
                 type="text"
                 placeholder="Search by complaint ID..."
-                className="w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white shadow-lg"
+                className="w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white shadow-lg ml-[250px]"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />

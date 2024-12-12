@@ -50,7 +50,7 @@ const HomePage = () => {
     </Helmet>
     <div className="w-full">
       <ScrollProgress />
-      <Navbar />
+      <Navbar/>
 
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
